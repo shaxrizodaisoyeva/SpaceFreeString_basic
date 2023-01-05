@@ -6,5 +6,17 @@ def remove_spaces(string: str)-> str:
     returns:
         str
     """
+    if string[0]==" ":
+        ans=string[1]+string[2]+string[3]+string[4]
+    if string[1]==" ":
+        ans=string[0]+string[2]+string[3]+string[4]
+    if string[2]==" ":
+        ans=string[0]+string[1]+string[3]+string[4]
+    if string[3]==" ":
+        ans=string[0]+string[1]+string[2]+string[4]
+    if string[4]==" ":
+        ans=string[0]+string[1]+string[2]+string[3]
     # Your code here
-    pass
+    return ans
+string=" absd"
+print(remove_spaces(string))
